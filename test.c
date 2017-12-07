@@ -4,13 +4,10 @@
 #include <dlfcn.h>
 #include <emscripten.h>
 
-void
-em_asm(char* str){
-  EM_ASM_({
-      var str=Pointer_stringify($0);
-      eval(str);
-  },str);
-}
+extern void em_asm_0(char* str);
+extern void em_asm_1(char* str,void* arg1);
+extern void em_asm_2(char* str,void* arg1,void* arg2);
+
 
 int
 main()
